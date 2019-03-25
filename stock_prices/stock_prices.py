@@ -4,28 +4,6 @@ import argparse
 
 
 def find_max_profit(prices):
-    # # grab first item in list
-    # first_item = prices[0]
-    # result = 0
-    # # first item minus next item
-    # for x in range(len(prices)):
-    #     temp = prices[x]
-    #     for y in range(len(prices)):
-    #         if temp - prices[y] > result:
-    #             result = temp - prices[y]
-    # return result
-
-    # first_item = prices[0]
-    # profit_bool = True
-    # profit = prices[0] - prices[1]
-    # # first item minus next item
-    # for x in range(1, len(prices) - 1):
-    #     if profit < prices[x] - prices[x + 1]:
-    #         profit = prices[x] - prices[x + 1]
-    #     # if profit_bool is True:
-    #     #     profit += x
-    #     print("PROFIT", profit)
-    # return profit
     profit_list, profit, loss = [], [], []
     down_bool = False
     for i in range(len(prices) - 1):
