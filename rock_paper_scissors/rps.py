@@ -6,16 +6,17 @@ import sys
 def rock_paper_scissors(n):
     rps_list = ['rock', 'paper', 'scissors']
     result = []
+    if n == 0:
+        return [result]
 
     def rounds(rps_order, round_number):
-        r = rps_order
         for i in range(len(rps_list)):
-            r.append(rps_list[i])
+            rps_order.append(rps_list[i])
             if (round_number == n):
-                result.append(r[:])
+                result.append(rps_order[:])
             else:
-                rounds(r, round_number + 1)
-            r.pop()
+                rounds(rps_order, round_number + 1)
+            rps_order.pop()
     rounds([], 1)
     return result
 
